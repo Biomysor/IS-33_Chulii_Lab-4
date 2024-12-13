@@ -176,3 +176,35 @@ h2 {
 }
 
 /* Медіа запити для мобільних пристроїв
+
+/* Стилі для десктопних пристроїв (екрани більше 1024px) */
+@media (min-width: 1024px) {
+    .navbar {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .menu {
+        display: flex;
+        list-style-type: none;
+    }
+
+    .button {
+        padding: 12px 24px;
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .navbar { flex-direction: column; }
+    .menu { text-align: center; }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .navbar { flex-direction: column; }
+    .menu { text-align: center; }
+}
+@media (max-width: 768px) {
+    .navbar { flex-direction: column; }
+    .button { padding: 10px 15px; }
+}
+
+
+
