@@ -176,3 +176,106 @@ h2 {
 .abonement-table tbody tr:nth-child(odd) {
     color: #446485;
 }
+/* Базові стилі — для десктопів (ширина ≥ 1024px) */
+
+/* Планшетна версія */
+@media (max-width: 1024px) and (min-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .navbar {
+        padding: 15px;
+        height: 50px;
+        font-size: 14px; /* Зменшення тексту */
+    }
+
+    .button {
+        font-size: 16px;
+        width: 70px;
+    }
+
+    .headofWeb h1 {
+        font-size: 72px; /* Зменшення заголовка */
+    }
+
+    .description {
+        flex-direction: column; /* Відображення тексту вертикально */
+    }
+
+    fieldset {
+        padding: 30px;
+        height: auto;
+    }
+
+    .button-container {
+        flex-direction: column; /* Кнопки вертикально */
+    }
+
+    .abonement-table th,
+    .abonement-table td {
+        font-size: medium; /* Зменшення тексту в таблиці */
+    }
+}
+
+/* Мобільна версія */
+@media (max-width: 768px) {
+    body {
+        padding: 5px;
+    }
+
+    .navbar {
+        height: 40px;
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .button {
+        font-size: 14px;
+        width: 100%; /* Розтягуємо кнопки на всю ширину */
+        margin: 5px 0;
+    }
+
+    .headofWeb h1 {
+        font-size: 48px;
+    }
+
+    .headofWeb p {
+        font-size: medium;
+    }
+
+    fieldset {
+        padding: 15px;
+        height: auto;
+    }
+
+    .hover-button {
+        font-size: 12px;
+        padding: 10px 20px;
+    }
+
+    .button-container {
+        flex-direction: column;
+        align-items: center; /* Центруємо кнопки */
+    }
+
+    .abonement-table {
+        font-size: small; /* Зменшення шрифтів таблиці */
+    }
+}
+
+/* Мобільна версія для портретної орієнтації */
+@media (max-width: 480px) {
+    .headofWeb h1 {
+        font-size: 32px;
+    }
+
+    .button {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+
+    .description {
+        font-size: small;
+    }
+}
