@@ -177,34 +177,227 @@ h2 {
 
 /* Медіа запити для мобільних пристроїв
 
-/* Стилі для десктопних пристроїв (екрани більше 1024px) */
-@media (min-width: 1024px) {
+/* Стилі для мобільних пристроїв (екрани менше 768px) */
+/* Стилі для мобільних пристроїв (екрани менше 768px) */
+@media (max-width: 768px) {
     .navbar {
-        display: flex;
-        justify-content: flex-end;
+        flex-direction: column; /* Вирівнювання меню по вертикалі */
     }
 
     .menu {
-        display: flex;
-        list-style-type: none;
+        text-align: center; /* Центрування елементів меню */
     }
 
     .button {
-        padding: 12px 24px;
+        padding: 8px 12px; /* Зменшення відступів кнопок */
+        font-size: 14px; /* Зменшення розміру шрифта кнопок */
+    }
+
+    /* Зменшення розміру заголовків на малих екранах */
+    .headofWeb h1 {
+        font-size: 48px; /* Зменшення розміру заголовка */
+    }
+
+    .headofWeb p {
+        font-size: 24px; /* Зменшення розміру підзаголовка */
+    }
+
+    /* Зменшення шрифтів та відступів таблиці */
+    .abonement-table th,
+    .abonement-table td {
+        font-size: 14px; /* Зменшення шрифтів в таблиці */
+        padding: 10px; /* Зменшення відступів в таблиці */
+    }
+    .Abonements h2 {
+        font-size: 24px; /* Зменшення розміру заголовка */
+    }
+
+    /* Зменшення шрифтів і стилів у блоках підписки */
+    .subscription h3 {
+        font-size: 18px; /* Зменшення шрифтів заголовків абонементів */
+    }
+
+    /* Вирівнювання блоків підписки вертикально */
+    .description {
+        display: flex;
+        flex-direction: column; /* Вертикальне вирівнювання блоків */
+        align-items: center; /* Центрування по горизонталі */
+    }
+
+    .subscription {
+        margin-bottom: 10px; /* Відступ між підписками */
+        width: 80%; /* Обмеження ширини на мобільних пристроях */
+        text-align: center; /* Центрування тексту */
+    }
+
+    .hover-button {
+        font-size: 14px; /* Зменшення шрифтів кнопок */
+        padding: 10px 15px; /* Зменшення відступів кнопок */
+    }
+    .Abonements{
+        height: fit-content;
     }
 }
+
+/* Стилі для середніх екранів (від 768px до 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
-    .navbar { flex-direction: column; }
-    .menu { text-align: center; }
+    .navbar {
+        flex-direction: column; /* Вертикальне вирівнювання меню */
+    }
+
+    .menu {
+        text-align: center; /* Центрування меню */
+    }
+
+    .button {
+        padding: 10px 15px; /* Відступи кнопок */
+        font-size: 15px; /* Зменшення шрифта кнопок */
+    }
+
+    /* Зменшення заголовків */
+    .headofWeb h1 {
+        font-size: 64px; /* Зменшення розміру заголовка */
+    }
+
+    .headofWeb p {
+        font-size: 28px; /* Зменшення розміру підзаголовка */
+    }
+
+    /* Зменшення шрифтів таблиці */
+    .abonement-table th,
+    .abonement-table td {
+        font-size: 16px; /* Зменшення шрифтів в таблиці */
+        padding: 12px; /* Зменшення відступів в таблиці */
+    }
+    .Abonements h2 {
+        font-size: 28px; /* Збільшення шрифта для підзаголовка */
+    }
+
+    /* Зменшення розмірів блоків абонементів */
+    .subscription h3 {
+        font-size: 20px; /* Збільшення шрифтів для підписів */
+    }
+
+    .description {
+        display: flex;
+        flex-direction: row; /* Горизонтальне вирівнювання блоків */
+        justify-content: space-around; /* Рівномірний відступ між блоками */
+    }
+
+    .subscription {
+        width: 30%; /* Більша ширина для середніх екранів */
+    }
+
+    .hover-button {
+        font-size: 15px; /* Збільшення шрифтів кнопок */
+        padding: 12px 20px; /* Збільшення відступів кнопок */
+    }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
-    .navbar { flex-direction: column; }
-    .menu { text-align: center; }
+
+/* Стилі для великих екранів (більше 1024px) */
+@media (min-width: 1024px) {
+    .navbar {
+        display: flex;
+        justify-content: flex-end; /* Вирівнювання елементів меню праворуч */
+    }
+
+    .menu {
+        display: flex; /* Горизонтальне вирівнювання меню */
+        list-style-type: none; /* Видалення маркерів */
+    }
+
+    .button {
+        padding: 12px 24px; /* Збільшення відступів кнопок */
+        font-size: 16px; /* Збільшення шрифта кнопок */
+    }
+
+    /* Заголовки */
+    .headofWeb h1 {
+        font-size: 96px; /* Збільшення розміру заголовка */
+    }
+
+    .headofWeb p {
+        font-size: 40px; /* Збільшення розміру підзаголовка */
+    }
+
+    /* Таблиця */
+    .abonement-table th,
+    .abonement-table td {
+        font-size: 18px; /* Збільшення шрифтів в таблиці */
+        padding: 20px; /* Збільшення відступів в таблиці */
+    }
+    .Abonements h2 {
+        font-size: 32px; /* Великий розмір шрифта заголовка */
+    }
+
+    .description {
+        display: flex;
+        justify-content: space-around; /* Рівномірне вирівнювання */
+    }
+
+    .subscription h3 {
+        font-size: 24px; /* Збільшення шрифтів підписів */
+    }
+
+    .subscription {
+        width: 25%; /* Менша ширина для великих екранів */
+    }
+
+    .hover-button {
+        font-size: 16px; /* Більший шрифт для кнопок */
+        padding: 15px 25px; /* Більші відступи для кнопок */
+    }
 }
-@media (max-width: 768px) {
-    .navbar { flex-direction: column; }
-    .button { padding: 10px 15px; }
+
+/* Стилі для дуже великих екранів (більше 1400px) */
+@media (min-width: 1400px) {
+    .navbar {
+        padding-right: 50px; /* Збільшення відступу праворуч */
+    }
+
+    .button {
+        font-size: 18px; /* Збільшення розміру шрифтів кнопок */
+    }
+
+    /* Заголовки */
+    .headofWeb h1 {
+        font-size: 120px; /* Збільшення розміру заголовка */
+    }
+
+    .headofWeb p {
+        font-size: 50px; /* Збільшення розміру підзаголовка */
+    }
+
+    /* Таблиця */
+    .abonement-table th,
+    .abonement-table td {
+        font-size: 20px; /* Збільшення шрифтів в таблиці */
+        padding: 25px; /* Збільшення відступів в таблиці */
+    }
+    .Abonements h2 {
+        font-size: 42px; /* Великий розмір шрифта заголовка */
+    }
+
+    .description {
+        display: flex;
+        justify-content: space-around; /* Рівномірне вирівнювання */
+    }
+
+    .subscription h3 {
+        font-size: 32px; /* Збільшення шрифтів підписів */
+    }
+
+    .subscription {
+        width: 35%; /* Менша ширина для великих екранів */
+    }
+
+    .hover-button {
+        font-size: 24px; /* Більший шрифт для кнопок */
+        padding: 20px 35px; /* Більші відступи для кнопок */
+    }
 }
+
+
 
 
 
